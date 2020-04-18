@@ -5,6 +5,8 @@ import AgenciaInmoviliaria.Clases.Inmueble;
 import AgenciaInmoviliaria.Clases.Persona;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Principal {
@@ -12,6 +14,7 @@ public class Principal {
     public static ArrayList<Inmueble> listaInmueble = new ArrayList<>();
     public static ArrayList<Contrato> listaContrato = new ArrayList<>();
     public static Scanner leer = new Scanner(System.in);
+    public static Map map = new HashMap();
 
     public static void main(String[] args) {
         datos();
@@ -482,14 +485,17 @@ public class Principal {
         listaPersona.add(persona2);
         listaPersona.add(persona3);
         listaPersona.add(persona4);
+        map.put(1,listaPersona);
 
-        Inmueble inmueble1 = new Inmueble("casa 1G", "01","casa 1G",123456);
+        Inmueble inmueble1 = new Inmueble("Pedro", "01","casa 1G",123456);
         Inmueble inmueble2 = new Inmueble("casa 10G", "02","casa 10G",654321);
         listaInmueble.add(inmueble1);
         listaInmueble.add(inmueble2);
+        map.put(2,listaInmueble);
 
         Contrato contrato =new Contrato("pedro", 123456, "paola", 147258, "casa 1G", "01", 5000.0, 6);
         listaContrato.add(contrato);
+        map.put(3,listaContrato);
     }
 
 }

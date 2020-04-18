@@ -1,12 +1,9 @@
 package AgenciaInmoviliaria.Clases;
 
 public class Contrato extends Datos{
-    //private String nombrePropietario;
-    //private int cedulaPropietario;
     private String nombreinqquilino;
     private int cedulaInquilino;
     private String direccionInmueble;
-    //private String idInmueble;
     private double precio;
     private int duracion;
 
