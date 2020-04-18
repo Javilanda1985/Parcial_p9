@@ -1,40 +1,26 @@
 package AgenciaInmoviliaria.Clases;
 
-public class Contrato {
-    private String nombrePropietario;
-    private int cedulaPropietario;
+public class Contrato extends Datos{
+    //private String nombrePropietario;
+    //private int cedulaPropietario;
     private String nombreinqquilino;
     private int cedulaInquilino;
     private String direccionInmueble;
-    private String idInmueble;
+    //private String idInmueble;
     private double precio;
     private int duracion;
 
-    public Contrato(String nombrePropietario, int cedulaPropietario, String nombreinqquilino, int cedulaInquilino, String direccionInmueble, String idInmueble, double precio, int duracion) {
-        this.nombrePropietario = nombrePropietario;
-        this.cedulaPropietario = cedulaPropietario;
+    public Contrato(String nombrePropietario, String idInmueble, int cedulaPropietario) {
+        super(nombrePropietario, idInmueble, cedulaPropietario);
+    }
+
+    public Contrato(String nombrePropietario, int cedulaPropietario,  String nombreinqquilino, int cedulaInquilino, String idInmueble,   String direccionInmueble, double precio, int duracion) {
+        super(nombrePropietario, idInmueble, cedulaPropietario);
         this.nombreinqquilino = nombreinqquilino;
         this.cedulaInquilino = cedulaInquilino;
         this.direccionInmueble = direccionInmueble;
-        this.idInmueble = idInmueble;
         this.precio = precio;
         this.duracion = duracion;
-    }
-
-    public String getNombrePropietario() {
-        return nombrePropietario;
-    }
-
-    public void setNombrePropietario(String nombrePropietario) {
-        this.nombrePropietario = nombrePropietario;
-    }
-
-    public int getCedulaPropietario() {
-        return cedulaPropietario;
-    }
-
-    public void setCedulaPropietario(int cedulaPropietario) {
-        this.cedulaPropietario = cedulaPropietario;
     }
 
     public String getNombreinqquilino() {
@@ -61,14 +47,6 @@ public class Contrato {
         this.direccionInmueble = direccionInmueble;
     }
 
-    public String getIdInmueble() {
-        return idInmueble;
-    }
-
-    public void setIdInmueble(String idInmueble) {
-        this.idInmueble = idInmueble;
-    }
-
     public double getPrecio() {
         return precio;
     }
@@ -84,8 +62,4 @@ public class Contrato {
     public void setDuracion(int duracion) {
         this.duracion = duracion;
     }
-
-
-
-
 }
